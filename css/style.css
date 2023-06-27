@@ -171,6 +171,7 @@ nav{
 
 .dropbox__title{
     color: var(--color-heading);
+    font-size: var(--fs-dropbox__title);
 }
 
 .dropbox__closed{
@@ -179,12 +180,28 @@ nav{
 }
 
 .dropbox__description{
-    padding-top: var(--padding-dropbox);
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    font-size: var(--fs-text);
+    transition: all 0.3s ease-in;
 }
 
 .dropbox__icon{
     transform: rotate(270deg);
+}
+
+.dropbox--open .dropbox__title{
+    color: var(--color-dropbox__title--active);;
+}
+
+.dropbox--open + .dropbox__description{
+    max-height: 200px;
+    padding-top: var(--padding-dropbox);
+    transition: all 0.3s ease-in;
+} 
+
+.dropbox--open .dropbox__icon{
+    transform: rotate(0deg);
 }
 
 /* Footer Styles */
