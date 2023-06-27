@@ -7,6 +7,7 @@
     --color-btn--hover: #0059bf;
     --color-card: #fff;
     --color-dropbox__title--active: #377DFF;
+    --color-box-shadow: lightgray;
 
     --fs-heading: 3.75rem;
     --fs-card__title: 1.75rem;
@@ -24,7 +25,8 @@
 
     --margin-text: 1.25rem;
 
-    --btn-border-radius: 8px;
+    --border-radius: 8px;
+    --border-radius--card: 16px; 
 
     --line-height: 1.5;
 }
@@ -57,7 +59,7 @@ section, footer{
     color: #fff;
     text-decoration: none;
     padding: 1rem 2rem;
-    border-radius: var(--btn-border-radius);
+    border-radius: var(--border-radius);
     display: inline-block;
 }
 
@@ -112,10 +114,77 @@ nav{
 }
 
 /* Main Styles */
+.hero__section{
+    background: url('../images/Background-3.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+}
 
-main{
-    min-height: 100vh;
-    background-color: var(--color-bg);
+.hero__heading, .faq__heading{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-heading);
+}
+
+.card{
+    padding: var(--padding-card);
+    background-color: var(--color-card);
+    font-size: var(--fs-card__text);
+    color: var(--color-text);
+    border-radius: var(--border-radius--card);
+    margin-top: 3rem;
+}
+
+.card__title{
+    margin-block: var(--margin-text);
+    font-size: var(--fs-card__title);
+    color: var(--color-heading);
+    border-radius: var(--border-radius);
+}
+
+.faq__section{
+    background-image: url('../images/Background-2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: lightgray;
+}
+
+.faq__text{
+    margin: var(--margin-text) auto;
+    color: var(--color-text);
+    font-size: var(--fs-text);
+    text-align: center;
+}
+
+.dropboxes{
+    margin-top: 5rem;
+}
+
+.dropbox{
+    margin: var(--margin-text) auto;
+    background-color: var(--color-card);
+    color: var(--color-text);
+    padding: var(--padding-dropbox);
+    border-radius: var(--border-radius);
+}
+
+.dropbox__title{
+    color: var(--color-heading);
+}
+
+.dropbox__closed{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropbox__description{
+    padding-top: var(--padding-dropbox);
+    display: none;
+}
+
+.dropbox__icon{
+    transform: rotate(270deg);
 }
 
 /* Footer Styles */
@@ -206,9 +275,32 @@ footer{
 
     /* Main Styles */
 
+    .hero__heading, .faq__heading{
+        font-size: var(--fs-heading);
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 4.6875rem;
+        gap: 2.5625rem;
+    }
+
+    .card{
+        margin-top: 0;
+    }
+
+    .faq__text{
+        width: 60%;
+    }
+
+    .dropbox{
+        width: 70%;
+    }
+
     /* Footer Styles */
     .footer__content--main{
-        width: 30%;
+        max-width: 25%;
     }
 
     .footer__flex{
