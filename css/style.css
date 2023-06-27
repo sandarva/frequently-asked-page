@@ -162,7 +162,7 @@ nav{
 }
 
 .dropbox{
-    margin: var(--margin-text) auto;
+    margin: 2rem auto;
     background-color: var(--color-card);
     color: var(--color-text);
     padding: var(--padding-dropbox);
