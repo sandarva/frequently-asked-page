@@ -302,6 +302,8 @@ footer{
     .nav__list{
         flex-direction: row;
         gap: 30px;
+        max-height: 1000px;
+        transition: none;
     }
 
     .nav__item{
@@ -311,6 +313,8 @@ footer{
     .btn__container{
         text-align: center;
         margin-top: 0rem;
+        max-height: 1000px;
+        transition: none;
     }
 
     /* Main Styles */
