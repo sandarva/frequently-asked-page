@@ -270,7 +270,7 @@ footer{
 }
 
 /* Media Queries */
-@media (min-width: 720px){
+@media (min-width: 820px){
     /* Global Styles */
     .container{
         width: 85%;
